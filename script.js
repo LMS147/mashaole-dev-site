@@ -163,6 +163,46 @@
     });
   }
 
+  /* ---------------- Cloudflare email-obfuscation fallback ----------------
+     Cloudflare's Scrape Shield rewrites mailto links into
+     `[email protected]` + a decoder script at /cdn-cgi/. If that script is
+     blocked (ad-blocker, strict CSP, offline copy) the placeholder text is
+     left on screen. This decodes it ourselves so the address always shows. */
+  function cfDecode(hex) {
+    const key = parseInt(hex.substr(0, 2), 16);
+    let out = '';
+    for (let i = 2; i < hex.length; i += 2) {
+      out += String.fromCharCode(parseInt(hex.substr(i, 2), 16) ^ key);
+    }
+    try { return decodeURIComponent(escape(out)); } catch (e) { return out; }
+  }
+
+  function fixObfuscatedEmails() {
+    // Placeholder spans/anchors carrying the encoded address
+    $$('.__cf_email__[data-cfemail]').forEach(el => {
+      const addr = cfDecode(el.dataset.cfemail);
+      if (!addr) return;
+      el.textContent = addr;
+      el.classList.remove('__cf_email__');
+      const link = el.closest('a');
+      if (link) link.href = 'mailto:' + addr;
+    });
+
+    // Anchors whose href became /cdn-cgi/l/email-protection#<hex>
+    $$('a[href*="/cdn-cgi/l/email-protection"]').forEach(a => {
+      const hash = a.getAttribute('href').split('#')[1];
+      if (!hash) return;
+      const addr = cfDecode(hash);
+      if (!addr) return;
+      a.href = 'mailto:' + addr;
+      const val = a.querySelector('.cl-value');
+      if (val && /\[email\s*protected\]/i.test(val.textContent)) val.textContent = addr;
+    });
+  }
+  fixObfuscatedEmails();
+  // Cloudflare injects late on some setups — re-run once after load.
+  window.addEventListener('load', () => setTimeout(fixObfuscatedEmails, 300));
+
   /* ---------------- Smooth anchor scroll with nav offset ---------------- */
   $$('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
