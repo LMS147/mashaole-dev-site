@@ -1,341 +1,415 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M Letsoalo - Software Developer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#080a0f">
+<title>Mashaole Letsoalo — Backend Developer</title>
+<meta name="description" content="Mashaole Letsoalo — Backend Developer and co-founder of Zyma Systems. Building RESTful APIs and scalable applications with C#, ASP.NET Core, Entity Framework Core and SQL Server.">
+
+<meta property="og:title" content="Mashaole Letsoalo — Backend Developer">
+<meta property="og:description" content="Backend Developer & co-founder of Zyma Systems. C#, ASP.NET Core, EF Core, SQL Server.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-family='sans-serif' font-weight='bold' fill='%2300e5ff'>M</text></svg>">
 </head>
 <body>
-    <div class="cursor" id="cursor"></div>
-  <div class="cursor-ring" id="cursorRing"></div>
 
-  <nav>
-  <div class="logo">M<span>.</span>LETSOALO</div>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
 
-  <div class="nav-links" id="navLinks">
-    
-    <!-- Close Button -->
-    <div class="close-btn" id="closeBtn">✕</div>
+<a class="skip-link" href="#main">Skip to content</a>
 
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact" class="nav-cta">Hire Me</a>
-  </div>
+<header>
+  <nav aria-label="Main navigation">
+    <a href="#hero" class="logo" aria-label="Home">M<span>.</span>LETSOALO</a>
 
-  <div class="hamburger" id="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</nav>
+    <div class="nav-overlay" id="navOverlay" hidden></div>
 
-  <section id="hero">
-  <div class="hero-grid-bg"></div>
-  <div class="hero-glow"></div>
-  <div class="hero-glow2"></div>
+    <div class="nav-links" id="navLinks">
+      <button class="close-btn" id="closeBtn" aria-label="Close menu">&#10005;</button>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact" class="nav-cta">Hire Me</a>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section id="hero">
+  <div class="hero-grid-bg" aria-hidden="true"></div>
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="hero-glow2" aria-hidden="true"></div>
 
   <div class="hero-container">
-    
     <div class="hero-content">
-      <div class="hero-badge">Available for freelance</div>
-      
+      <p class="hero-badge">Available for freelance</p>
+
       <h1 class="hero-name">
-        MASHAOLE<br/>
+        MASHAOLE<br>
         <span class="line2">LETSOALO</span><span class="accent">_</span>
       </h1>
 
+      <p class="hero-role">Backend Developer <span aria-hidden="true">&#183;</span> Co-Founder, Zyma Systems</p>
+
       <p class="hero-desc">
-        Web developer crafting high-performance, visually striking digital experiences. 
-        Clean code. Pixel-perfect design. Zero compromise.
+        I build the engine room — RESTful APIs, database architecture and secure
+        backend services with C#, ASP.NET Core and Entity Framework Core.
+        Clean architecture. Production-ready. Zero compromise.
       </p>
 
       <div class="hero-actions">
-        <a href="#projects" class="btn-primary">View Projects →</a>
-        <a href="#contact" class="btn-ghost">Get in touch ↗</a>
+        <a href="#projects" class="btn-primary">View Projects <span aria-hidden="true">&#8594;</span></a>
+        <a href="MyResume.pdf" target="_blank" rel="noopener" class="btn-ghost">Download CV <span aria-hidden="true">&#8595;</span></a>
+      </div>
+
+      <ul class="hero-meta">
+        <li><span>Based in</span> Pretoria, South Africa</li>
+        <li><span>Focus</span> C# &amp; ASP.NET Core</li>
+        <li><span>Status</span> Open to opportunities</li>
+      </ul>
+    </div>
+
+    <div class="hero-image">
+      <div class="hero-image-frame">
+        <img src="images/myimage.png" alt="Portrait of Mashaole Letsoalo"
+             width="440" height="520" loading="eager"
+             onerror="this.closest('.hero-image-frame').classList.add('no-img'); this.remove();">
+        <div class="hero-image-fallback" aria-hidden="true">ML</div>
       </div>
     </div>
-
-    <!-- Your Image -->
-    <div class="hero-image">
-      <img src="images/myimage.png" alt="Mashaole Letsoalo">
-    </div>
-
   </div>
 
-  <div class="hero-scroll">
-    <div class="scroll-line"></div>
+  <a href="#about" class="hero-scroll" aria-label="Scroll to about section">
+    <span class="scroll-line" aria-hidden="true"></span>
     <span>scroll</span>
-  </div>
+  </a>
 </section>
 
-  <!--About-->
-  <section id="about">
-  <div class="section-label">About Me</div>
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <h2 class="section-label">About Me</h2>
 
   <div class="about-grid reveal">
-    
-    <!-- Left Content -->
     <div class="about-content">
-      <h2 class="about-heading">
-        I build software<br />
-        that <span>delivers results</span>
-      </h2>
+      <p class="about-heading">
+        I build backends<br>
+        that <span>hold up in production</span>
+      </p>
 
       <p class="about-body">
-        I'm Mashaole Letsoalo, a software developer focused on building scalable,
-        high-performance applications. I combine clean architecture,
-        efficient code, and thoughtful design to create systems that are
-        reliable, maintainable, and built to grow.
-        <br /><br />
-        Whether it's a web platform, backend system, or full-stack
-        application, I approach every project with precision, structure,
-        and long-term scalability in mind.
+        I'm Mashaole Letsoalo, a backend developer with a growing foundation across
+        both front-end and back-end development. I co-founded
+        <strong>Zyma Systems</strong>, where I lead backend development for client
+        projects — designing RESTful Web APIs, database architecture and secure
+        business logic with C#, ASP.NET Core and SQL Server.
       </p>
+      <p class="about-body">
+        I'm currently completing a Diploma in Information Technology (Software
+        Development) at Rosebank College. I'm a strong problem-solver with a
+        collaborative mindset, quick to adapt, and eager to contribute to
+        innovative tech solutions in Agile environments.
+      </p>
+
+      <a href="#contact" class="about-link">Let's work together <span aria-hidden="true">&#8594;</span></a>
     </div>
 
-    <!-- Right Content -->
-    <div class="about-stats">
-      <div class="stat-item">
-        <div class="stat-num">1+</div>
-        <div class="stat-label">Years Learning & Building</div>
-      </div>
-
-      <div class="stat-item">
-        <div class="stat-num">5+</div>
-        <div class="stat-label">Projects Completed</div>
-      </div>
-
-      <div class="stat-item">
-        <div class="stat-num">3+</div>
-        <div class="stat-label">Core Technologies</div>
-      </div>
-
-      <div class="stat-item">
-        <div class="stat-num">∞</div>
-        <div class="stat-label">Commitment to Growth</div>
-      </div>
-    </div>
-
+    <ul class="about-stats">
+      <li class="stat-item"><span class="stat-num" data-count="4" data-suffix="+">4+</span><span class="stat-label">Projects Shipped</span></li>
+      <li class="stat-item"><span class="stat-num" data-count="4" data-suffix="">4</span><span class="stat-label">HackerRank Certifications</span></li>
+      <li class="stat-item"><span class="stat-num" data-count="5" data-suffix="+">5+</span><span class="stat-label">Languages Used</span></li>
+      <li class="stat-item"><span class="stat-num">&#8734;</span><span class="stat-label">Commitment to Growth</span></li>
+    </ul>
   </div>
 </section>
 
-<!--Skills-->
+<!-- ============ EXPERIENCE / EDUCATION ============ -->
+<section id="experience">
+  <h2 class="section-label">Experience &amp; Education</h2>
+
+  <div class="timeline reveal">
+
+    <article class="tl-item">
+      <div class="tl-side">
+        <span class="tl-date">Dec 2025 &mdash; Present</span>
+        <span class="tl-tag tl-tag--live">Current</span>
+      </div>
+      <div class="tl-body">
+        <h3 class="tl-role">Backend Developer</h3>
+        <p class="tl-org">Zyma Systems <span>&#183; Co-Founder</span></p>
+        <ul class="tl-points">
+          <li>Co-founded a software development company building custom web solutions for clients.</li>
+          <li>Lead backend development across client projects using C#, ASP.NET Core, Entity Framework Core and .NET Framework.</li>
+          <li>Designed and implemented RESTful Web APIs, including the <strong>Marcus Logistics System</strong> — a transportation management platform with ride booking, parcel delivery, real-time tracking and role-based access.</li>
+          <li>Built database architecture, business logic and secure backend services on SQL Server with EF Core.</li>
+          <li>Partnered with frontend developers to ship full-stack solutions from requirements gathering to deployment.</li>
+        </ul>
+        <ul class="tl-tech">
+          <li>C#</li><li>ASP.NET Core Web API</li><li>EF Core</li><li>SQL Server</li><li>.NET 8</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="tl-item">
+      <div class="tl-side">
+        <span class="tl-date">Expected Dec 2026</span>
+        <span class="tl-tag">In progress</span>
+      </div>
+      <div class="tl-body">
+        <h3 class="tl-role">Diploma in Information Technology</h3>
+        <p class="tl-org">Rosebank College, South Africa <span>&#183; Software Development</span></p>
+        <ul class="tl-points">
+          <li>Core focus: programming fundamentals, GUI development, systems analysis &amp; design, and the full SDLC.</li>
+          <li>Coursework spanning web &amp; mobile application development, database management, information security and project management.</li>
+        </ul>
+        <ul class="tl-tech">
+          <li>Java</li><li>C#</li><li>JavaScript</li><li>PHP</li><li>Kotlin</li><li>SQL</li><li>WPF / XAML</li>
+        </ul>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- Certifications -->
+  <h3 class="subsection-label reveal">Certifications</h3>
+  <ul class="cert-grid reveal">
+    <li class="cert-card">
+      <span class="cert-year">2025</span>
+      <span class="cert-name">C# (Basic)</span>
+      <span class="cert-issuer">HackerRank</span>
+      <span class="cert-desc">Core C# fundamentals: OOP, data types, loops and methods.</span>
+    </li>
+    <li class="cert-card">
+      <span class="cert-year">2024</span>
+      <span class="cert-name">Java (Basic)</span>
+      <span class="cert-issuer">HackerRank</span>
+      <span class="cert-desc">Java syntax, OOP principles and problem-solving.</span>
+    </li>
+    <li class="cert-card">
+      <span class="cert-year">2024</span>
+      <span class="cert-name">JavaScript (Basic)</span>
+      <span class="cert-issuer">HackerRank</span>
+      <span class="cert-desc">JavaScript fundamentals: variables, functions and logic.</span>
+    </li>
+    <li class="cert-card">
+      <span class="cert-year">2024</span>
+      <span class="cert-name">Problem Solving (Basic)</span>
+      <span class="cert-issuer">HackerRank</span>
+      <span class="cert-desc">Algorithmic thinking and logical problem-solving.</span>
+    </li>
+  </ul>
+</section>
+
+<!-- ============ SKILLS ============ -->
 <section id="skills">
-  <div class="section-label">Skills</div>
+  <h2 class="section-label">Skills</h2>
 
   <div class="skills-grid reveal">
 
-    <!-- Programming Languages -->
-    <div class="skill-card">
-      <div class="skill-cat">Programming</div>
-      <div class="skill-name">Core Languages</div>
-      <div class="skill-desc">Strong foundations in object-oriented and structured programming.</div>
-      <div class="skill-tags">
-        <span class="skill-tag">C#</span>
-        <span class="skill-tag">Java</span>
-        <span class="skill-tag">JavaScript</span>
-        <span class="skill-tag">HTML5</span>
-        <span class="skill-tag">CSS3</span>
-      </div>
-    </div>
+    <article class="skill-card">
+      <p class="skill-cat">Programming</p>
+      <h3 class="skill-name">Core Languages</h3>
+      <p class="skill-desc">Strong foundations in object-oriented and structured programming.</p>
+      <ul class="skill-tags">
+        <li class="skill-tag">C#</li><li class="skill-tag">Kotlin</li><li class="skill-tag">Java</li>
+        <li class="skill-tag">JavaScript</li><li class="skill-tag">PHP</li>
+      </ul>
+    </article>
 
-    <!-- Backend Development -->
-    <div class="skill-card">
-      <div class="skill-cat">Backend</div>
-      <div class="skill-name">Server & Architecture</div>
-      <div class="skill-desc">Building structured, scalable backend systems.</div>
-      <div class="skill-tags">
-        <span class="skill-tag">.NET</span>
-        <span class="skill-tag">REST APIs</span>
-        <span class="skill-tag">OOP</span>
-        <span class="skill-tag">System Design</span>
-        <span class="skill-tag">Authentication</span>
-      </div>
-    </div>
+    <article class="skill-card">
+      <p class="skill-cat">Backend</p>
+      <h3 class="skill-name">APIs &amp; Architecture</h3>
+      <p class="skill-desc">Designing structured, scalable backend services and REST APIs.</p>
+      <ul class="skill-tags">
+        <li class="skill-tag">ASP.NET Core</li><li class="skill-tag">RESTful APIs</li>
+        <li class="skill-tag">.NET 8</li><li class="skill-tag">Identity / Auth</li>
+        <li class="skill-tag">MVC</li>
+      </ul>
+    </article>
 
-    <!-- Databases -->
-    <div class="skill-card">
-      <div class="skill-cat">Data</div>
-      <div class="skill-name">Databases</div>
-      <div class="skill-desc">Designing and managing structured data systems.</div>
-      <div class="skill-tags">
-        <span class="skill-tag">SQL</span>
-        <span class="skill-tag">Database Design</span>
-        <span class="skill-tag">Normalization</span>
-        <span class="skill-tag">PostgreSQL</span>
-      </div>
-    </div>
+    <article class="skill-card">
+      <p class="skill-cat">Data</p>
+      <h3 class="skill-name">Databases</h3>
+      <p class="skill-desc">Modelling, querying and persisting structured data.</p>
+      <ul class="skill-tags">
+        <li class="skill-tag">SQL Server</li><li class="skill-tag">Entity Framework Core</li>
+        <li class="skill-tag">Room Database</li><li class="skill-tag">Database Design</li>
+      </ul>
+    </article>
 
-    <!-- Desktop & UI -->
-    <div class="skill-card">
-      <div class="skill-cat">Application Dev</div>
-      <div class="skill-name">Desktop & UI</div>
-      <div class="skill-desc">Building structured GUI-based applications.</div>
-      <div class="skill-tags">
-        <span class="skill-tag">WPF</span>
-        <span class="skill-tag">XAML</span>
-        <span class="skill-tag">Java Swing</span>
-      </div>
-    </div>
+    <article class="skill-card">
+      <p class="skill-cat">Mobile &amp; Desktop</p>
+      <h3 class="skill-name">Application Development</h3>
+      <p class="skill-desc">Native Android apps and structured GUI-based desktop software.</p>
+      <ul class="skill-tags">
+        <li class="skill-tag">Android (Kotlin)</li><li class="skill-tag">MVVM</li>
+        <li class="skill-tag">WPF</li><li class="skill-tag">XAML</li>
+        <li class="skill-tag">Material Design</li>
+      </ul>
+    </article>
 
-    <!-- DevOps & Workflow -->
-    <div class="skill-card">
-      <div class="skill-cat">DevOps</div>
-      <div class="skill-name">Workflow & Versioning</div>
-      <div class="skill-desc">Organised project structure and CI/CD awareness.</div>
-      <div class="skill-tags">
-        <span class="skill-tag">Git</span>
-        <span class="skill-tag">GitHub</span>
-        <span class="skill-tag">Monorepo Structure</span>
-        <span class="skill-tag">CI/CD Concepts</span>
-      </div>
-    </div>
+    <article class="skill-card">
+      <p class="skill-cat">Web</p>
+      <h3 class="skill-name">Front-End Foundations</h3>
+      <p class="skill-desc">Building responsive, user-friendly interfaces.</p>
+      <ul class="skill-tags">
+        <li class="skill-tag">HTML5</li><li class="skill-tag">CSS3</li>
+        <li class="skill-tag">JavaScript</li><li class="skill-tag">PHP</li>
+        <li class="skill-tag">Responsive Design</li>
+      </ul>
+    </article>
 
-    <!-- Problem Solving -->
-    <div class="skill-card">
-      <div class="skill-cat">Engineering</div>
-      <div class="skill-name">Problem Solving</div>
-      <div class="skill-desc">Algorithmic thinking and structured debugging.</div>
-      <div class="skill-tags">
-        <span class="skill-tag">Data Structures</span>
-        <span class="skill-tag">Algorithms</span>
-        <span class="skill-tag">Debugging</span>
-        <span class="skill-tag">System Analysis</span>
-      </div>
-    </div>
+    <article class="skill-card">
+      <p class="skill-cat">Tools</p>
+      <h3 class="skill-name">Workflow &amp; Libraries</h3>
+      <p class="skill-desc">Day-to-day tooling and reporting/export libraries.</p>
+      <ul class="skill-tags">
+        <li class="skill-tag">Git</li><li class="skill-tag">Visual Studio</li>
+        <li class="skill-tag">Android Studio</li><li class="skill-tag">EPPlus</li>
+        <li class="skill-tag">iText7</li>
+      </ul>
+    </article>
 
   </div>
 </section>
 
-  <!--Projects-->
-  <section id="projects">
-  <div class="section-label">Projects</div>
+<!-- ============ PROJECTS ============ -->
+<section id="projects">
+  <h2 class="section-label">Projects</h2>
 
   <div class="projects-list reveal">
 
-    <!-- Project 01 -->
-    <a href="https://github.com/LMS147/Cybersecurity_Awareness_Chatbot" class="project-item">
-      <div class="proj-num">01</div>
-
-      <div class="proj-info">
-        <div class="proj-title">Cybersecurity Awareness Chatbot</div>
-        <div class="proj-desc">
-          Intelligent WPF chatbot with sentiment detection, threat analysis,
-          quiz engine, task assistant, and activity logging.
-        </div>
-      </div>
-
-      <div class="proj-tech">
-        <span>C#</span>
-        <span>WPF</span>
-        <span>XAML</span>
-        <span>.NET</span>
-      </div>
-
-      <div class="proj-arrow">→</div>
+    <a href="#contact" class="project-item">
+      <span class="proj-num">01</span>
+      <span class="proj-info">
+        <span class="proj-title">Marcus Logistics System <span class="proj-badge">Client work</span></span>
+        <span class="proj-desc">Comprehensive transportation management platform supporting ride booking, parcel delivery, real-time tracking and multi-user role-based access. Led the backend and RESTful Web API design at Zyma Systems.</span>
+      </span>
+      <span class="proj-tech"><span>C#</span><span>ASP.NET Core</span><span>EF Core</span><span>SQL Server</span></span>
+      <span class="proj-arrow" aria-hidden="true">&#8594;</span>
     </a>
 
-    <!-- Project 02 -->
-    <a href="https://github.com/LMS147/Login-System" class="project-item">
-      <div class="proj-num">02</div>
-
-      <div class="proj-info">
-        <div class="proj-title">Login & Messaging System</div>
-        <div class="proj-desc">
-          Structured Java application implementing OOP principles,
-          message arrays, search functionality, and unit testing.
-        </div>
-      </div>
-
-      <div class="proj-tech">
-        <span>Java</span>
-        <span>JUnit</span>
-        <span>OOP</span>
-      </div>
-
-      <div class="proj-arrow">→</div>
+    <a href="https://github.com/LMS147/Contract-Monthly-Claim-System-" target="_blank" rel="noopener" class="project-item">
+      <span class="proj-num">02</span>
+      <span class="proj-info">
+        <span class="proj-title">Contract Monthly Claim System</span>
+        <span class="proj-desc">Full-featured web app for managing monthly contract claims — ASP.NET Core Identity with Manager/User role-based access, full CRUD on EF Core, plus Excel and PDF export. Built on clean MVC architecture with services and database seeding.</span>
+      </span>
+      <span class="proj-tech"><span>ASP.NET Core 8</span><span>Identity</span><span>EPPlus</span><span>iText7</span></span>
+      <span class="proj-arrow" aria-hidden="true">&#8594;</span>
     </a>
 
-    <!-- Project 03 -->
-    <a href="#" class="project-item">
-      <div class="proj-num">03</div>
-
-      <div class="proj-info">
-        <div class="proj-title">Airport Crisis Response Management System</div>
-        <div class="proj-desc">
-          Systems Analysis & Design project including business rules,
-          WBS, data modeling, and architectural documentation.
-        </div>
-      </div>
-
-      <div class="proj-tech">
-        <span>System Design</span>
-        <span>UML</span>
-        <span>Database Modeling</span>
-      </div>
-
-      <div class="proj-arrow">→</div>
+    <a href="https://github.com/LMS147/FinTrack_Pro" target="_blank" rel="noopener" class="project-item">
+      <span class="proj-num">03</span>
+      <span class="proj-info">
+        <span class="proj-title">FinTrack Pro</span>
+        <span class="proj-desc">Personal finance Android app with secure authentication, multi-user data isolation and Shared Wallets via invite codes. Expense/income tracking, budgets with progress bars, receipt attachments, multi-currency support and pie-chart reporting.</span>
+      </span>
+      <span class="proj-tech"><span>Kotlin</span><span>Room</span><span>MVVM</span><span>MPAndroidChart</span></span>
+      <span class="proj-arrow" aria-hidden="true">&#8594;</span>
     </a>
 
-    <!-- Project 04 -->
-    <a href="#" class="project-item">
-  <div class="proj-num">04</div>
+    <a href="https://github.com/LMS147/Cybersecurity_Awareness_Chatbot" target="_blank" rel="noopener" class="project-item">
+      <span class="proj-num">04</span>
+      <span class="proj-info">
+        <span class="proj-title">Cybersecurity Awareness Chatbot</span>
+        <span class="proj-desc">Desktop WPF app teaching cybersecurity best practices. Intelligent chatbot using Levenshtein distance for fuzzy matching and custom sentiment detection, with a multi-strategy response engine and Chat, Quiz, Task Manager and Activity Logger modules.</span>
+      </span>
+      <span class="proj-tech"><span>C#</span><span>WPF / XAML</span><span>.NET</span><span>Custom NLP</span></span>
+      <span class="proj-arrow" aria-hidden="true">&#8594;</span>
+    </a>
 
-  <div class="proj-info">
-    <div class="proj-title">Monthly Claim Management System</div>
-    <div class="proj-desc">
-      Business-focused application for submitting, validating, and tracking
-      monthly claims with structured approval workflow and data management.
+  </div>
+
+  <a href="https://github.com/LMS147" target="_blank" rel="noopener" class="projects-more">
+    See more on GitHub <span aria-hidden="true">&#8599;</span>
+  </a>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <h2 class="section-label">Contact</h2>
+
+  <div class="contact-wrap reveal">
+    <div>
+      <p class="contact-heading">Ready to build<br>something <span>great?</span></p>
+      <p class="contact-sub">
+        Have a project in mind or just want to say hello? I'm always open to new
+        opportunities. Let's make something worth talking about.
+      </p>
+      <p class="contact-location" aria-label="Location">
+        <span aria-hidden="true">&#9679;</span> Pretoria, South Africa
+      </p>
     </div>
-  </div>
 
-  <div class="proj-tech">
-    <span>C#</span>
-    <span>.NET</span>
-    <span>SQL</span>
-    <span>OOP</span>
-  </div>
-
-  <div class="proj-arrow">→</div>
-</a>
-
+    <div class="contact-links">
+      <a href="/cdn-cgi/l/email-protection#3b565a48535a54575e48535a545752550b7b5c565a525715585456" class="contact-link">
+        <span class="cl-text">
+          <span class="cl-label">Email</span>
+          <span class="cl-value"><span class="__cf_email__" data-cfemail="0e636f7d666f61626b7d666f616267603e4e69636f6762206d6163">[email&#160;protected]</span></span>
+        </span>
+        <span class="cl-arrow" aria-hidden="true">&#8594;</span>
+      </a>
+      <a href="/cdn-cgi/l/email-protection#b6dbd7c5ded7d9dad398dad3c2c5d9d7dad99886f6d9c3c2dad9d9dd98d5d9db" class="contact-link">
+        <span class="cl-text">
+          <span class="cl-label">Email &middot; Alternate</span>
+          <span class="cl-value"><span class="__cf_email__" data-cfemail="c7aaa6b4afa6a8aba2e9aba2b3b4a8a6aba8e9f787a8b2b3aba8a8ace9a4a8aa">[email&#160;protected]</span></span>
+        </span>
+        <span class="cl-arrow" aria-hidden="true">&#8594;</span>
+      </a>
+      <a href="tel:+27656449330" class="contact-link">
+        <span class="cl-text">
+          <span class="cl-label">Phone</span>
+          <span class="cl-value">065 644 9330</span>
+        </span>
+        <span class="cl-arrow" aria-hidden="true">&#8594;</span>
+      </a>
+      <a href="https://www.linkedin.com/in/mashaole-letsoalo" target="_blank" rel="noopener" class="contact-link">
+        <span class="cl-text">
+          <span class="cl-label">LinkedIn</span>
+          <span class="cl-value">in/mashaole-letsoalo</span>
+        </span>
+        <span class="cl-arrow" aria-hidden="true">&#8594;</span>
+      </a>
+      <a href="https://github.com/LMS147" target="_blank" rel="noopener" class="contact-link">
+        <span class="cl-text">
+          <span class="cl-label">GitHub</span>
+          <span class="cl-value">github.com/LMS147</span>
+        </span>
+        <span class="cl-arrow" aria-hidden="true">&#8594;</span>
+      </a>
+      <a href="MyResume.pdf" target="_blank" rel="noopener" class="contact-link">
+        <span class="cl-text">
+          <span class="cl-label">Résumé</span>
+          <span class="cl-value">Download PDF</span>
+        </span>
+        <span class="cl-arrow" aria-hidden="true">&#8595;</span>
+      </a>
+    </div>
   </div>
 </section>
 
-  <!--contact-->
-  <section id="contact">
-    <div class="section-label">Contact</div>
-    <div class="contact-wrap reveal">
-      <div>
-        <h2 class="contact-heading">Ready to build<br/>something <span>great?</span></h2>
-        <p class="contact-sub">Have a project in mind or just want to say hello? I'm always open to new opportunities. Let's make something worth talking about.</p>
-      </div>
-      <div class="contact-links">
-        <a href="mailto:mashaole.letsoalo.0@outlook.com" class="contact-link">
-          <div><div class="cl-label">Email</div><div class="cl-value">mashaole.letsoalo.0@outlook.com</div></div>
-          <div class="cl-arrow">→</div>
-        </a>
-        <a href="https://www.linkedin.com/in/mashaole-letsoalo" target="_blank" class="contact-link">
-          <div><div class="cl-label">LinkedIn</div><div class="cl-value">www.linkedin.com/in/mashaole-letsoalo</div></div>
-          <div class="cl-arrow">→</div>
-        </a>
-        <a href="https://github.com/LMS147" target="_blank" class="contact-link">
-          <div><div class="cl-label">GitHub</div><div class="cl-value">https://github.com/LMS147</div></div>
-          <div class="cl-arrow">→</div>
-        </a>
-      </div>
-    </div>
-  </section>
+</main>
 
-  <footer>
-    <span>© 2026 M LETSOALO</span>
-    <span>// Available for freelance</span>
-    <span>Built with care & caffeine</span>
-  </footer>
-<script src="script.js"></script>
+<footer>
+  <span>&copy; 2026 M LETSOALO</span>
+  <span>// Available for freelance</span>
+  <span>Built with care &amp; caffeine</span>
+</footer>
 
-</body>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a2f941efbd659a67',t:'MTc4NzQ3OTA5Mw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
