@@ -31,7 +31,24 @@ h1 span { display: block; color: var(--accent); margin-top: 6px; }
 .button:hover { filter: brightness(1.15); }
 .button.secondary:hover { border-color: var(--accent); color: var(--accent); }
 .art { margin: 0; width: 100%; min-width: 0; }
-.art img { display: block; width: 100%; height: auto; max-height: 70svh; object-fit: contain; border-radius: 10px; }
+/* Fade only the outer edges so the character and blue details stay clear. */
+.art img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 70svh;
+  object-fit: contain;
+  border-radius: 0;
+  mix-blend-mode: lighten;
+  -webkit-mask-image:
+    linear-gradient(to right, transparent, #000 5%, #000 95%, transparent),
+    linear-gradient(to bottom, transparent, #000 8%, #000 88%, transparent);
+  mask-image:
+    linear-gradient(to right, transparent, #000 5%, #000 95%, transparent),
+    linear-gradient(to bottom, transparent, #000 8%, #000 88%, transparent);
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+}
 .error-footer { display: block; padding: 18px 24px 24px; text-align: center; color: var(--muted); font: 11px/1.8 var(--font-mono); }
 @media (min-width: 1600px) { main { gap: 60px; } }
 @media (max-width: 900px) { main { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
