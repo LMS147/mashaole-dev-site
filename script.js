@@ -211,6 +211,7 @@
       const target = document.querySelector(id);
       if (!target) return;
       e.preventDefault();
+      if (target.tagName === 'DETAILS') target.open = true;
       const top = target.getBoundingClientRect().top + window.scrollY - (nav.offsetHeight + 12);
       window.scrollTo({ top, behavior: reduceMotion ? 'auto' : 'smooth' });
       history.replaceState(null, '', id);

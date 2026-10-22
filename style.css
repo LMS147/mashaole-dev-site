@@ -962,3 +962,16 @@ footer span:nth-child(2) { color: var(--accent); }
   body { background: #fff; color: #000; }
   section { padding: 1.5rem 0; break-inside: avoid; }
 }
+
+/* Project context and readable keyboard navigation */
+.project-notes { margin-top: 2.5rem; }
+.project-notes-intro { color: var(--ink-2); line-height: 1.8; margin-bottom: 1.25rem; }
+.project-notes details { border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 1.25rem; margin-bottom: .75rem; scroll-margin-top: 110px; }
+.project-notes summary { cursor: pointer; font-family: var(--font-display); font-weight: 700; line-height: 1.6; }
+.project-notes details[open] summary { margin-bottom: 1rem; color: var(--accent); }
+.project-notes p { color: var(--ink-2); line-height: 1.85; margin-bottom: .85rem; max-width: 85ch; }
+.project-notes a { color: var(--accent); display: inline-block; padding-block: .65rem; overflow-wrap: anywhere; }
+#capabilities { border-bottom: 1px solid var(--line); }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+.stat-num { overflow-wrap: anywhere; }
+@media (max-width: 560px) { .project-notes details { padding: 1rem; } }

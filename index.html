@@ -46,6 +46,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<noscript><style>.reveal, .reveal * { opacity: 1 !important; transform: none !important; } .hero-badge, .hero-name, .hero-role, .hero-desc, .hero-actions, .hero-meta, .hero-image-frame, .hero-scroll { opacity: 1 !important; } @media (max-width: 860px) { .hamburger, .close-btn { display: none; } .nav-links { position: static; visibility: visible; transform: none; width: 100%; height: auto; padding: 1rem; flex-direction: row; flex-wrap: wrap; gap: 1rem; } header { position: static; } nav { flex-wrap: wrap; } }</style></noscript>
 
 <!-- ===================== Structured Data (JSON-LD) ===================== -->
 <script type="application/ld+json">
@@ -120,9 +121,9 @@
     <div class="nav-links" id="navLinks">
       <button class="close-btn" id="closeBtn" aria-label="Close menu">&#10005;</button>
       <a href="#about">About</a>
+      <a href="#projects">Projects</a>
       <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
       <a href="#contact" class="nav-cta">Hire Me</a>
     </div>
 
@@ -142,7 +143,7 @@
 
   <div class="hero-container">
     <div class="hero-content">
-      <p class="hero-badge">Available for freelance</p>
+      <p class="hero-badge">Open to roles &amp; freelance</p>
 
       <h1 class="hero-name">
         MASHAOLE<br>
@@ -172,7 +173,7 @@
     <div class="hero-image">
       <div class="hero-image-frame">
         <img src="images/formal.jpg" alt="Portrait of Mashaole Letsoalo"
-             width="440" height="520" loading="eager"
+             width="440" height="520" loading="eager" fetchpriority="high" decoding="async"
              onerror="this.closest('.hero-image-frame').classList.add('no-img'); this.remove();">
         <div class="hero-image-fallback" aria-hidden="true">ML</div>
       </div>
@@ -214,13 +215,103 @@
     </div>
 
     <ul class="about-stats">
-      <li class="stat-item"><span class="stat-num" data-count="5" data-suffix="+">5+</span><span class="stat-label">Featured Projects</span></li>
+      <li class="stat-item"><span class="stat-num" data-count="5" data-suffix="">5</span><span class="stat-label">Featured Projects</span></li>
       <li class="stat-item"><span class="stat-num" data-count="4" data-suffix="">4</span><span class="stat-label">HackerRank Certifications</span></li>
       <li class="stat-item"><span class="stat-num" data-count="5" data-suffix="+">5+</span><span class="stat-label">Languages Used</span></li>
-      <li class="stat-item"><span class="stat-num">&#8734;</span><span class="stat-label">Commitment to Growth</span></li>
+      <li class="stat-item"><span class="stat-num">3</span><span class="stat-label">Platforms: Web, Android &amp; Desktop</span></li>
     </ul>
   </div>
 </section>
+
+<!-- ============ PROJECTS ============ -->
+<section id="projects">
+  <h2 class="section-label">Projects</h2>
+
+  <div class="projects-list reveal">
+
+    <a href="#marcus-details" class="project-item" aria-label="Read about Marcus Logistics System">
+      <span class="proj-num">01</span>
+      <span class="proj-info">
+        <span class="proj-title">Marcus Logistics System <span class="proj-badge">Client work</span></span>
+        <span class="proj-desc">Comprehensive transportation management platform supporting ride booking, parcel delivery, real-time tracking and multi-user role-based access. Led the backend and RESTful Web API design at Zyma Systems.</span>
+      </span>
+      <span class="proj-tech"><span>C#</span><span>ASP.NET Core</span><span>EF Core</span><span>SQL Server</span></span>
+      <span class="proj-arrow" aria-hidden="true">&#8594;</span>
+    </a>
+
+    <a href="https://github.com/LMS147/StudyTrack" target="_blank" rel="noopener" class="project-item">
+      <span class="proj-num">02</span>
+      <span class="proj-info">
+        <span class="proj-title">StudyTrack — AI-Powered Study &amp; Task Planner</span>
+        <span class="proj-desc">Native Android study planner with an LLM-powered assistant that turns natural-language study prompts into scheduled tasks. Combines cloud REST synchronisation with offline on-device storage, JWT authentication, XP gamification and automated GitHub Actions CI/CD.</span>
+      </span>
+      <span class="proj-tech"><span>Kotlin</span><span>Material 3</span><span>Retrofit</span><span>LLM API</span></span>
+      <span class="proj-arrow" aria-hidden="true">&#8594;</span>
+    </a>
+
+    <a href="https://github.com/LMS147/Contract-Monthly-Claim-System-" target="_blank" rel="noopener" class="project-item">
+      <span class="proj-num">03</span>
+      <span class="proj-info">
+        <span class="proj-title">Contract Monthly Claim System</span>
+        <span class="proj-desc">Full-featured web app for managing monthly contract claims — ASP.NET Core Identity with Manager/User role-based access, full CRUD on EF Core, plus Excel and PDF export. Built on clean MVC architecture with services and database seeding.</span>
+      </span>
+      <span class="proj-tech"><span>ASP.NET Core 8</span><span>Identity</span><span>EPPlus</span><span>iText7</span></span>
+      <span class="proj-arrow" aria-hidden="true">&#8594;</span>
+    </a>
+
+    <a href="https://github.com/LMS147/FinTrack_Pro" target="_blank" rel="noopener" class="project-item">
+      <span class="proj-num">04</span>
+      <span class="proj-info">
+        <span class="proj-title">FinTrack Pro</span>
+        <span class="proj-desc">Personal finance Android app with secure authentication, multi-user data isolation and Shared Wallets via invite codes. Expense/income tracking, budgets with progress bars, receipt attachments, multi-currency support and pie-chart reporting.</span>
+      </span>
+      <span class="proj-tech"><span>Kotlin</span><span>Room</span><span>MVVM</span><span>MPAndroidChart</span></span>
+      <span class="proj-arrow" aria-hidden="true">&#8594;</span>
+    </a>
+
+    <a href="https://github.com/LMS147/Cybersecurity_Awareness_Chatbot" target="_blank" rel="noopener" class="project-item">
+      <span class="proj-num">05</span>
+      <span class="proj-info">
+        <span class="proj-title">Cybersecurity Awareness Chatbot</span>
+        <span class="proj-desc">Desktop WPF app teaching cybersecurity best practices. Intelligent chatbot using Levenshtein distance for fuzzy matching and custom sentiment detection, with a multi-strategy response engine and Chat, Quiz, Task Manager and Activity Logger modules.</span>
+      </span>
+      <span class="proj-tech"><span>C#</span><span>WPF / XAML</span><span>.NET</span><span>Custom NLP</span></span>
+      <span class="proj-arrow" aria-hidden="true">&#8594;</span>
+    </a>
+
+  </div>
+
+  <div class="project-notes" aria-labelledby="project-notes-title">
+    <h3 id="project-notes-title" class="subsection-label">Behind the projects</h3>
+    <p class="project-notes-intro">A closer look at my contributions and the technologies behind the features.</p>
+    <details id="marcus-details">
+      <summary>Marcus Logistics System — backend development</summary>
+      <p><strong>Purpose:</strong> Support ride booking, parcel delivery, live tracking and different user roles in one transportation platform.</p>
+      <p><strong>My contribution:</strong> Designed RESTful APIs, business logic and relational data access at Zyma Systems, working with frontend developers to connect the user interface.</p>
+      <p><strong>Technical focus:</strong> C#, ASP.NET Core, Entity Framework Core, SQL Server and role-based access control.</p>
+      <a href="mailto:mashaoleshaolin0@gmail.com?subject=Marcus%20Logistics%20project%20enquiry">Ask about my contribution &#8594;</a>
+    </details>
+    <details>
+      <summary>StudyTrack — Android and AI integration</summary>
+      <p><strong>Purpose:</strong> Help students organise study sessions and tasks, including turning natural-language prompts into scheduled calendar tasks.</p>
+      <p><strong>My contribution:</strong> Built the Kotlin Android application with ViewBinding, Material 3, Retrofit/OkHttp and an LLM-powered study assistant.</p>
+      <p><strong>Technical focus:</strong> Cloud REST synchronisation, offline on-device storage, JWT authentication, XP gamification and GitHub Actions CI/CD.</p>
+      <a href="https://github.com/LMS147/StudyTrack" target="_blank" rel="noopener">Explore the source code &#8599;</a>
+    </details>
+    <details>
+      <summary>Contract Monthly Claim System — web workflows</summary>
+      <p><strong>Purpose:</strong> Manage monthly contract claims with separate permissions for managers and users.</p>
+      <p><strong>My contribution:</strong> Implemented claim workflows, document validation, database persistence and Excel/PDF reporting in an ASP.NET Core MVC application.</p>
+      <p><strong>Technical focus:</strong> ASP.NET Core Identity, EF Core, SQL Server, EPPlus, ClosedXML and iText7.</p>
+      <a href="https://github.com/LMS147/Contract-Monthly-Claim-System-" target="_blank" rel="noopener">Explore the source code &#8599;</a>
+    </details>
+  </div>
+
+  <a href="https://github.com/LMS147" target="_blank" rel="noopener" class="projects-more">
+    See more on GitHub <span aria-hidden="true">&#8599;</span>
+  </a>
+</section>
+
 
 <!-- ============ EXPERIENCE / EDUCATION ============ -->
 <section id="experience">
@@ -377,67 +468,26 @@
   </div>
 </section>
 
-<!-- ============ PROJECTS ============ -->
-<section id="projects">
-  <h2 class="section-label">Projects</h2>
-
-  <div class="projects-list reveal">
-
-    <a href="#contact" class="project-item">
-      <span class="proj-num">01</span>
-      <span class="proj-info">
-        <span class="proj-title">Marcus Logistics System <span class="proj-badge">Client work</span></span>
-        <span class="proj-desc">Comprehensive transportation management platform supporting ride booking, parcel delivery, real-time tracking and multi-user role-based access. Led the backend and RESTful Web API design at Zyma Systems.</span>
-      </span>
-      <span class="proj-tech"><span>C#</span><span>ASP.NET Core</span><span>EF Core</span><span>SQL Server</span></span>
-      <span class="proj-arrow" aria-hidden="true">&#8594;</span>
-    </a>
-
-    <a href="https://github.com/LMS147/StudyTrack" target="_blank" rel="noopener" class="project-item">
-      <span class="proj-num">02</span>
-      <span class="proj-info">
-        <span class="proj-title">StudyTrack — AI-Powered Study &amp; Task Planner</span>
-        <span class="proj-desc">Native Android study planner with an LLM-powered assistant that turns natural-language study prompts into scheduled tasks. Combines cloud REST synchronisation with offline on-device storage, JWT authentication, XP gamification and automated GitHub Actions CI/CD.</span>
-      </span>
-      <span class="proj-tech"><span>Kotlin</span><span>Material 3</span><span>Retrofit</span><span>LLM API</span></span>
-      <span class="proj-arrow" aria-hidden="true">&#8594;</span>
-    </a>
-
-    <a href="https://github.com/LMS147/Contract-Monthly-Claim-System-" target="_blank" rel="noopener" class="project-item">
-      <span class="proj-num">03</span>
-      <span class="proj-info">
-        <span class="proj-title">Contract Monthly Claim System</span>
-        <span class="proj-desc">Full-featured web app for managing monthly contract claims — ASP.NET Core Identity with Manager/User role-based access, full CRUD on EF Core, plus Excel and PDF export. Built on clean MVC architecture with services and database seeding.</span>
-      </span>
-      <span class="proj-tech"><span>ASP.NET Core 8</span><span>Identity</span><span>EPPlus</span><span>iText7</span></span>
-      <span class="proj-arrow" aria-hidden="true">&#8594;</span>
-    </a>
-
-    <a href="https://github.com/LMS147/FinTrack_Pro" target="_blank" rel="noopener" class="project-item">
-      <span class="proj-num">04</span>
-      <span class="proj-info">
-        <span class="proj-title">FinTrack Pro</span>
-        <span class="proj-desc">Personal finance Android app with secure authentication, multi-user data isolation and Shared Wallets via invite codes. Expense/income tracking, budgets with progress bars, receipt attachments, multi-currency support and pie-chart reporting.</span>
-      </span>
-      <span class="proj-tech"><span>Kotlin</span><span>Room</span><span>MVVM</span><span>MPAndroidChart</span></span>
-      <span class="proj-arrow" aria-hidden="true">&#8594;</span>
-    </a>
-
-    <a href="https://github.com/LMS147/Cybersecurity_Awareness_Chatbot" target="_blank" rel="noopener" class="project-item">
-      <span class="proj-num">05</span>
-      <span class="proj-info">
-        <span class="proj-title">Cybersecurity Awareness Chatbot</span>
-        <span class="proj-desc">Desktop WPF app teaching cybersecurity best practices. Intelligent chatbot using Levenshtein distance for fuzzy matching and custom sentiment detection, with a multi-strategy response engine and Chat, Quiz, Task Manager and Activity Logger modules.</span>
-      </span>
-      <span class="proj-tech"><span>C#</span><span>WPF / XAML</span><span>.NET</span><span>Custom NLP</span></span>
-      <span class="proj-arrow" aria-hidden="true">&#8594;</span>
-    </a>
-
+<!-- ============ CAPABILITIES ============ -->
+<section id="capabilities">
+  <h2 class="section-label">What I Can Help With</h2>
+  <div class="skills-grid">
+    <article class="skill-card">
+      <p class="skill-cat">Web &amp; backend</p>
+      <h3 class="skill-name">Applications &amp; APIs</h3>
+      <p class="skill-desc">Business applications, RESTful APIs, authentication, role-based permissions and relational database design with C# and ASP.NET Core.</p>
+    </article>
+    <article class="skill-card">
+      <p class="skill-cat">Mobile &amp; desktop</p>
+      <h3 class="skill-name">Software for Everyday Work</h3>
+      <p class="skill-desc">Native Android apps with Kotlin, desktop applications with WPF, and offline data storage for practical workflows.</p>
+    </article>
+    <article class="skill-card">
+      <p class="skill-cat">Integration &amp; delivery</p>
+      <h3 class="skill-name">Connect &amp; Maintain</h3>
+      <p class="skill-desc">Connect interfaces to APIs, integrate LLM-powered features, automate builds with GitHub Actions, and support deployment and maintenance.</p>
+    </article>
   </div>
-
-  <a href="https://github.com/LMS147" target="_blank" rel="noopener" class="projects-more">
-    See more on GitHub <span aria-hidden="true">&#8599;</span>
-  </a>
 </section>
 
 <!-- ============ CONTACT ============ -->
@@ -448,8 +498,9 @@
     <div>
       <p class="contact-heading">Ready to build<br>something <span>great?</span></p>
       <p class="contact-sub">
-        Have a project in mind or just want to say hello? I'm always open to new
-        opportunities. Let's make something worth talking about.
+        I'm open to software development roles and freelance projects. For a role,
+        share the job description. For a project, tell me what you want to build,
+        your timeline and the best way to reach you.
       </p>
       <p class="contact-location" aria-label="Location">
         <span aria-hidden="true">&#9679;</span> Pretoria, South Africa
@@ -507,7 +558,7 @@
 
 <footer>
   <span>&copy; 2026 M LETSOALO</span>
-  <span>// Available for freelance</span>
+  <span>// Open to roles &amp; freelance</span>
   <span>Built with care &amp; caffeine</span>
 </footer>
 
