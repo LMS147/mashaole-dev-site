@@ -15,7 +15,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   --surface-3: #171d28;
   --ink:       #eef1f7;
   --ink-2:     #a8b0c0;   /* readable body text (was too dark before) */
-  --muted:     #6b7486;
+  --muted:     #9aa6b9;
   --accent:    #00e5ff;
   --accent-2:  #7c3aed;
   --line:      rgba(255,255,255,0.08);
@@ -961,4 +961,91 @@ footer span:nth-child(2) { color: var(--accent); }
   .hero-glow, .hero-glow2, .hero-grid-bg { display: none !important; }
   body { background: #fff; color: #000; }
   section { padding: 1.5rem 0; break-inside: avoid; }
+}
+
+/* Project context and readable keyboard navigation */
+.project-notes { margin-top: 2.5rem; }
+.project-notes-intro { color: var(--ink-2); line-height: 1.8; margin-bottom: 1.25rem; }
+.project-notes details { border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 1.25rem; margin-bottom: .75rem; scroll-margin-top: 110px; }
+.project-notes summary { cursor: pointer; font-family: var(--font-display); font-weight: 700; line-height: 1.6; }
+.project-notes details[open] summary { margin-bottom: 1rem; color: var(--accent); }
+.project-notes p { color: var(--ink-2); line-height: 1.85; margin-bottom: .85rem; max-width: 85ch; }
+.project-notes a { color: var(--accent); display: inline-block; padding-block: .65rem; overflow-wrap: anywhere; }
+#capabilities { border-bottom: 1px solid var(--line); }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+.stat-num { overflow-wrap: anywhere; }
+@media (max-width: 560px) { .project-notes details { padding: 1rem; } }
+
+/* Keep all six skill cards in complete rows at every breakpoint. */
+#skills .skills-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+@media (max-width: 1023px) {
+  #skills .skills-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  #skills .skills-grid { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* Portfolio finishing pass: legible text, compact sections and clear details. */
+.skill-desc, .proj-desc, .cert-desc, .tl-points li {
+  font-size: 13px;
+  line-height: 1.85;
+}
+.skill-tag, .proj-tech span, .tl-tech li {
+  font-size: 11px;
+  color: #b9c5d8;
+  border-color: rgba(255,255,255,.16);
+}
+.stat-label, .cl-label, .hero-meta span, .tl-date, .cert-issuer {
+  font-size: 10.5px;
+  letter-spacing: .12em;
+}
+#capabilities { padding-block: clamp(3rem, 5vw, 4.5rem); }
+#capabilities .section-label { margin-bottom: 2rem; }
+#skills { padding-bottom: clamp(3rem, 5vw, 4.5rem); }
+.project-footer { margin-top: 2rem; }
+.project-footer .projects-more { margin: 0; }
+.project-notes { margin-top: 3rem; }
+.project-notes .subsection-label { margin: 0 0 1.25rem; }
+.project-notes-intro { margin-bottom: 1.5rem; }
+.project-notes details {
+  background: var(--bg);
+  border: 1px solid var(--line-2);
+  border-radius: 12px;
+  padding: 0;
+  margin-bottom: .85rem;
+}
+.project-notes summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 64px;
+  padding: 1.15rem 1.4rem;
+  list-style: none;
+  font-size: 15px;
+}
+.project-notes summary::-webkit-details-marker { display: none; }
+.project-notes summary::after {
+  content: '+';
+  color: var(--accent);
+  font: 500 24px var(--font-mono);
+  flex-shrink: 0;
+}
+.project-notes details[open] summary {
+  margin-bottom: 0;
+  border-bottom: 1px solid var(--line);
+}
+.project-notes details[open] summary::after { content: '−'; }
+.project-notes summary:hover { color: var(--accent); }
+.project-notes details p { margin: 1.1rem 1.4rem; font-size: 13px; }
+.project-notes details > a { margin: 0 1.4rem 1rem; font-size: 12px; }
+@media (max-width: 640px) {
+  .project-notes summary { padding: 1rem; font-size: 14px; }
+  .project-notes details p { margin-inline: 1rem; }
+  .project-notes details > a { margin-inline: 1rem; }
+}
+@media print {
+  #capabilities, #skills { padding-block: 1.5rem; }
 }

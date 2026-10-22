@@ -4,39 +4,93 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex">
+<meta name="theme-color" content="#07090e">
 <title>404 — Page Not Found | Mashaole Letsoalo</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css?v=20261022-polish">
+<noscript><style>.reveal, .reveal * { opacity: 1 !important; transform: none !important; } .hero-badge, .hero-name, .hero-role, .hero-desc, .hero-actions, .hero-meta, .hero-image-frame, .hero-scroll { opacity: 1 !important; } @media (max-width: 860px) { .hamburger, .close-btn { display: none; } .nav-links { position: static; visibility: visible; transform: none; width: 100%; height: auto; padding: 1rem; flex-direction: row; flex-wrap: wrap; gap: 1rem; } header { position: static; } nav { flex-wrap: wrap; } }</style></noscript>
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    min-height: 100vh;
-    display: flex; align-items: center; justify-content: center;
-    background: #07090e; color: #eef2f8;
-    font-family: "Courier New", Consolas, monospace;
-    padding: 24px;
-  }
-  .box { max-width: 560px; text-align: center; }
-  .code {
-    font-size: clamp(4rem, 14vw, 7rem);
-    font-weight: 700; color: #00e5ff; letter-spacing: .05em;
-    text-shadow: 0 0 40px rgba(0,229,255,.35);
-  }
-  h1 { font-size: 1.15rem; font-weight: 400; margin: 8px 0 20px; color: #94a3b8; }
-  a {
-    display: inline-block; padding: 12px 28px; border: 2px solid #00e5ff;
-    color: #00e5ff; text-decoration: none; font-weight: 700;
-    letter-spacing: .06em; text-transform: uppercase; font-size: .85rem;
-    transition: background .25s, color .25s;
-  }
-  a:hover { background: #00e5ff; color: #07090e; }
-  p.note { margin-top: 28px; color: #475569; font-size: .8rem; }
+
+:root { color-scheme: dark; --text: var(--ink); }
+body { min-height: 100svh; }
+a { color: inherit; text-decoration: none; }
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 6px; }
+
+main { width: min(1440px, 100%); margin: auto; padding: 120px var(--gutter) 40px; min-height: calc(100svh - 64px); display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); align-items: center; gap: clamp(24px, 3vw, 48px); }
+.copy { min-width: 0; position: relative; z-index: 1; padding: 24px 0; }
+.eyebrow { color: var(--accent); font: 600 12px ui-monospace, monospace; letter-spacing: .15em; text-transform: uppercase; margin: 0 0 26px; }
+h1 { margin: 0; font-family: Impact, "Arial Narrow", "Helvetica Neue", sans-serif; font-size: clamp(42px, 5.3vw, 84px); font-weight: 900; line-height: 1.04; letter-spacing: -.035em; text-transform: uppercase; }
+h1 span { display: block; color: var(--accent); margin-top: 6px; }
+.description { max-width: 420px; color: var(--muted); font-size: 15px; line-height: 1.85; margin: 26px 0 30px; }
+.actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.button { display: inline-flex; align-items: center; justify-content: center; gap: 16px; min-height: 48px; padding: 16px 24px; border: 1px solid var(--accent); background: var(--accent); color: var(--bg); border-radius: 3px; font: 700 11px ui-monospace, monospace; letter-spacing: .08em; text-transform: uppercase; }
+.button.secondary { border-color: #ffffff38; color: var(--text); background: transparent; }
+.button:hover { filter: brightness(1.15); }
+.button.secondary:hover { border-color: var(--accent); color: var(--accent); }
+.art { margin: 0; width: 100%; min-width: 0; }
+.art img { display: block; width: 100%; height: auto; max-height: 70svh; object-fit: contain; border-radius: 10px; }
+.error-footer { display: block; padding: 18px 24px 24px; text-align: center; color: var(--muted); font: 11px/1.8 var(--font-mono); }
+@media (min-width: 1600px) { main { gap: 60px; } }
+@media (max-width: 900px) { main { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
+@media (max-width: 650px) {
+
+main { grid-template-columns: 1fr; gap: 16px; padding: 100px 20px 36px; }
+.copy { padding: 12px 0 8px; text-align: center; }
+.eyebrow { margin-bottom: 18px; font-size: 11px; }
+h1 { font-size: clamp(39px, 10vw, 64px); }
+.description { margin: 22px auto 24px; font-size: 14px; }
+.actions { justify-content: center; gap: 10px; }
+.button { padding: 15px 18px; }
+.art { max-width: 460px; justify-self: center; }
+}
+
+.copy { padding-block: 24px; }
+
 </style>
 </head>
 <body>
-  <div class="box">
-    <div class="code">404_</div>
-    <h1>This page was not found on the server.</h1>
-    <a href="/">Back to Home</a>
-    <p class="note">Mashaole Letsoalo &middot; Backend Developer &middot; mletsoalo.co.za</p>
-  </div>
-<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a303fd8b5c41fadf',t:'MTc4NzU5MTYzNQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+<a class="skip-link" href="#main">Skip to content</a>
+<header>
+  <nav aria-label="Main navigation">
+    <a href="/#hero" class="logo" aria-label="Home">M<span>.</span>LETSOALO</a>
+
+    <div class="nav-overlay" id="navOverlay" hidden></div>
+
+    <div class="nav-links" id="navLinks">
+      <button class="close-btn" id="closeBtn" aria-label="Close menu">&#10005;</button>
+      <a href="/#about">About</a>
+      <a href="/#projects">Projects</a>
+      <a href="/#experience">Experience</a>
+      <a href="/#skills">Skills</a>
+      <a href="/#contact" class="nav-cta">Hire Me</a>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+<main id="main">
+<section class="copy" aria-labelledby="error-title">
+<p class="eyebrow">Error 404 · Page not found</p>
+<h1 id="error-title">This page went<span>off the grid.</span></h1>
+<p class="description">The page you're looking for doesn't exist or may have moved. Let's get you back on track.</p>
+<div class="actions">
+<a class="button" href="/">Back to home <span aria-hidden="true">→</span></a>
+<a class="button secondary" href="/#contact">Contact me</a>
+</div>
+</section>
+<figure class="art">
+<img src="/images/404-character.png" width="1254" height="1254" alt="Mashaole's illustrated character with headphones and an ML laptop, sitting beside wrong-turn signs in front of glowing blue 404 numbers." fetchpriority="high">
+</figure>
+</main>
+<footer class="error-footer">Mashaole Letsoalo · Software Developer</footer>
+<script src="/script.js?v=20261022-polish" defer></script>
+</body>
 </html>
