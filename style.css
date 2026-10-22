@@ -15,7 +15,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   --surface-3: #171d28;
   --ink:       #eef1f7;
   --ink-2:     #a8b0c0;   /* readable body text (was too dark before) */
-  --muted:     #6b7486;
+  --muted:     #9aa6b9;
   --accent:    #00e5ff;
   --accent-2:  #7c3aed;
   --line:      rgba(255,255,255,0.08);
@@ -985,4 +985,67 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 }
 @media (max-width: 640px) {
   #skills .skills-grid { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* Portfolio finishing pass: legible text, compact sections and clear details. */
+.skill-desc, .proj-desc, .cert-desc, .tl-points li {
+  font-size: 13px;
+  line-height: 1.85;
+}
+.skill-tag, .proj-tech span, .tl-tech li {
+  font-size: 11px;
+  color: #b9c5d8;
+  border-color: rgba(255,255,255,.16);
+}
+.stat-label, .cl-label, .hero-meta span, .tl-date, .cert-issuer {
+  font-size: 10.5px;
+  letter-spacing: .12em;
+}
+#capabilities { padding-block: clamp(3rem, 5vw, 4.5rem); }
+#capabilities .section-label { margin-bottom: 2rem; }
+#skills { padding-bottom: clamp(3rem, 5vw, 4.5rem); }
+.project-footer { margin-top: 2rem; }
+.project-footer .projects-more { margin: 0; }
+.project-notes { margin-top: 3rem; }
+.project-notes .subsection-label { margin: 0 0 1.25rem; }
+.project-notes-intro { margin-bottom: 1.5rem; }
+.project-notes details {
+  background: var(--bg);
+  border: 1px solid var(--line-2);
+  border-radius: 12px;
+  padding: 0;
+  margin-bottom: .85rem;
+}
+.project-notes summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 64px;
+  padding: 1.15rem 1.4rem;
+  list-style: none;
+  font-size: 15px;
+}
+.project-notes summary::-webkit-details-marker { display: none; }
+.project-notes summary::after {
+  content: '+';
+  color: var(--accent);
+  font: 500 24px var(--font-mono);
+  flex-shrink: 0;
+}
+.project-notes details[open] summary {
+  margin-bottom: 0;
+  border-bottom: 1px solid var(--line);
+}
+.project-notes details[open] summary::after { content: '−'; }
+.project-notes summary:hover { color: var(--accent); }
+.project-notes details p { margin: 1.1rem 1.4rem; font-size: 13px; }
+.project-notes details > a { margin: 0 1.4rem 1rem; font-size: 12px; }
+@media (max-width: 640px) {
+  .project-notes summary { padding: 1rem; font-size: 14px; }
+  .project-notes details p { margin-inline: 1rem; }
+  .project-notes details > a { margin-inline: 1rem; }
+}
+@media print {
+  #capabilities, #skills { padding-block: 1.5rem; }
 }
