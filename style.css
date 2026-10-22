@@ -975,3 +975,14 @@ footer span:nth-child(2) { color: var(--accent); }
 a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
 .stat-num { overflow-wrap: anywhere; }
 @media (max-width: 560px) { .project-notes details { padding: 1rem; } }
+
+/* Keep all six skill cards in complete rows at every breakpoint. */
+#skills .skills-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+@media (max-width: 1023px) {
+  #skills .skills-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  #skills .skills-grid { grid-template-columns: minmax(0, 1fr); }
+}
